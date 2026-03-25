@@ -6,9 +6,18 @@
     <title>Chat de IA</title>
 </head>
 <body>
-<H2>Chat IA</H2>  
-<div id="Chat"></div>
-<input type="text" name="input" id="input" placeholder="Digite sua mensagem...">
-<button onclick="sendMessage()">Enviar</button>
+    <H2>Chat IA</H2>  
+    <div id="Chat"></div>
+    <input type="text" name="input" id="input" placeholder="Digite sua mensagem...">
+    <button onclick="sendMessage()">Enviar</button>
+    <script>
+       const input = document.getElementById("input");
+       const chat = document.getElementById("chat");
+
+       const prompt = input.value;
+       if (!prompt) return;
+
+       chat.innerHTML +=`<div class="user"><b>você:</b> ${prompt}</div>`;
+    </script>
 </body>
 </html>
